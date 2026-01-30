@@ -18,9 +18,12 @@ textarea { width:100%; height:80px; margin-top:5px; padding:5px;}
 }
 
 .kop img {
-  width: 80px;        /* IDEAL UNTUK LOGO / FOTO MASJID */
-  height: auto;
-  object-fit: contain;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+
 }
 
 .kop-text h1 {
