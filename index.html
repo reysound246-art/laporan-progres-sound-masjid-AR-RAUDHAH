@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Laporan Proyek Sound System</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Laporan Proyek Sound Masjid Ar-Raudhah</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+<h2>📌 LAPORAN UPDATE & PROGRES</h2>
+<h3>PERBAIKAN SISTEM SOUND - MASJID AR-RAUDHAH</h3>
 
-<h2>Laporan Proyek Sound System</h2>
-<p>Seksi Tata Ruang & Pembangunan</p>
+<p>📍 Alamat: Perumahan Flamboyan Garden 2<br>
+📄 Nomor: 1/JAN/I/2026<br>
+🗓️ Tanggal: <span id="tanggal"></span></p>
 
-<ul>
-  <li><input type="checkbox" checked> Survey lokasi</li>
-  <li><input type="checkbox"> Instalasi speaker</li>
-  <li><input type="checkbox"> Setting sound</li>
-</ul>
+<h4>🔧 A. Rencana Pengadaan & Pekerjaan</h4>
+<table>
+<thead>
+<tr><th>No</th><th>Pekerjaan</th><th>Status</th></tr>
+</thead>
+<tbody id="taskTable">
+<tr><td>1</td><td>Pengadaan unit TOA baru 2 unit</td><td><input type="checkbox"></td></tr>
+<tr><td>2</td><td>Pengadaan 1 unit amplifier baru</td><td><input type="checkbox"></td></tr>
+<tr><td>3</td><td>Perbaikan TOA lama sebanyak 5 unit</td><td><input type="checkbox"></td></tr>
+<tr><td>4</td><td>Modifikasi bekas menara tandon air menjadi menara TOA</td><td><input type="checkbox" checked></td></tr>
+<tr><td>5</td><td>Pengadaan microphone imam 4 unit (stok cadangan)</td><td><input type="checkbox"></td></tr>
+<tr><td>6</td><td>Pengadaan 3 pcs baterai & 1 unit charger</td><td><input type="checkbox"></td></tr>
+<tr><td>7</td><td>Pengadaan kabel control wire 4 group</td><td><input type="checkbox"></td></tr>
+<tr><td>8</td><td>Pengadaan kabel TOA 100 meter</td><td><input type="checkbox"></td></tr>
+<tr><td>9</td><td>Pengadaan TR-OT untuk ampli lama</td><td><input type="checkbox"></td></tr>
+<tr><td>10</td><td>Pengadaan sparepart TR-IT</td><td><input type="checkbox"></td></tr>
+<tr><td>11</td><td>Pembuatan box kontrol modifikasi</td><td><input type="checkbox"></td></tr>
+<tr><td>12</td><td>Pemasangan TOA sisi selatan 3 unit</td><td><input type="checkbox" checked></td></tr>
+<tr><td>13</td><td>Pengecatan menara TOA sisi selatan</td><td><input type="checkbox"></td></tr>
+<tr><td>14</td><td>Pembuatan tower TOA sisi utara</td><td><input type="checkbox"></td></tr>
+<tr><td>15</td><td>Mounting & pemasangan TOA sisi depan masjid</td><td><input type="checkbox"></td></tr>
+<tr><td>16</td><td>Pembuatan menara TOA sisi utara</td><td><input type="checkbox"></td></tr>
+<tr><td>17</td><td>Perbaikan amplifier lama (±80%)</td><td><input type="checkbox"></td></tr>
+<tr><td>18</td><td>Perakitan modul kontrol sistem sound</td><td><input type="checkbox"></td></tr>
+<tr><td>19</td><td>Penambahan mounting speaker sisi selatan & utara</td><td><input type="checkbox"></td></tr>
+<tr><td>20</td><td>Perbaikan speaker lama (merk BMB)</td><td><input type="checkbox"></td></tr>
+<tr><td>21</td><td>Penambahan / modifikasi amplifier untuk speaker BMB</td><td><input type="checkbox"></td></tr>
+<tr><td>22</td><td>Modifikasi hardcase / lemari amplifier</td><td><input type="checkbox"></td></tr>
+<tr><td>23</td><td>Pengecatan akhir menara TOA sisi selatan</td><td><input type="checkbox"></td></tr>
+</tbody>
+</table>
+
+<div class="progress-box">
+  <div id="progress-bar"></div>
+</div>
+<p id="progress-text">Progress: 0%</p>
+
+<textarea id="catatan" placeholder="Catatan tambahan..."></textarea>
+
+<div class="footer">
+<p>Tim Teknis DKM Masjid Ar-Raudhah - Seksi Tata Ruang & Pembangunan</p>
+</div>
+</div>
 
 <script src="script.js"></script>
 </body>
