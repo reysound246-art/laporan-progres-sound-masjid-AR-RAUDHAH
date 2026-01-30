@@ -17,9 +17,9 @@ textarea { width:100%; height:80px; margin-top:5px; padding:5px;}
 }
 
 .kop img {
-  width: 90px;
-  height: auto;
-  display: block;
+  width: 65px;
+  border-radius: 8px;
+  }
 }
 
 .kop-text h1,
