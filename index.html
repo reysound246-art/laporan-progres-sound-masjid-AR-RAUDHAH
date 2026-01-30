@@ -1,63 +1,131 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Laporan Proyek Sound Masjid Ar-Raudhah</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Progres Sound Masjid Ar-Raudhah</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f4f6f8;
+      margin:0;
+      padding:20px;
+      color:#222;
+    }
+    .container{
+      max-width:900px;
+      margin:auto;
+      background:#fff;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 5px 20px rgba(0,0,0,.1);
+    }
+    h1,h2,h3{
+      text-align:center;
+      margin:0;
+    }
+    h1{font-size:26px; margin-bottom:5px;}
+    h2{font-size:18px; font-weight:normal; margin-bottom:20px;}
+    hr{margin:25px 0;}.info-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-bottom:20px;
+}
+.info-table td{
+  padding:8px;
+}
+.info-table td:first-child{
+  width:160px;
+  font-weight:bold;
+}
+
+.section-title{
+  background:#0b5ed7;
+  color:#fff;
+  padding:10px 15px;
+  border-radius:6px;
+  margin-top:30px;
+  margin-bottom:10px;
+}
+
+ul{
+  padding-left:20px;
+}
+li{margin-bottom:8px;}
+
+.done{color:green; font-weight:bold;}
+.progress{color:#e67e22; font-weight:bold;}
+.todo{color:#c0392b; font-weight:bold;}
+
+.footer{
+  text-align:center;
+  margin-top:40px;
+  font-size:14px;
+}
+
+.badge{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
+  margin-left:6px;
+}
+.b-done{background:#d4edda;color:#155724;}
+.b-progress{background:#fff3cd;color:#856404;}
+.b-todo{background:#f8d7da;color:#721c24;}
+
+@media print{
+  body{background:#fff;}
+  .container{box-shadow:none;}
+}
+
+  </style>
 </head>
-<body>
-<div class="container">
-<h2>📌 LAPORAN UPDATE & PROGRES</h2>
-<h3>PERBAIKAN SISTEM SOUND - MASJID AR-RAUDHAH</h3>
-
-<p>📍 Alamat: Perumahan Flamboyan Garden 2<br>
-📄 Nomor: 1/JAN/I/2026<br>
-🗓️ Tanggal: <span id="tanggal"></span></p>
-
-<h4>🔧 A. Rencana Pengadaan & Pekerjaan</h4>
-<table>
-<thead>
-<tr><th>No</th><th>Pekerjaan</th><th>Status</th></tr>
-</thead>
-<tbody id="taskTable">
-<tr><td>1</td><td>Pengadaan unit TOA baru 2 unit</td><td><input type="checkbox"></td></tr>
-<tr><td>2</td><td>Pengadaan 1 unit amplifier baru</td><td><input type="checkbox"></td></tr>
-<tr><td>3</td><td>Perbaikan TOA lama sebanyak 5 unit</td><td><input type="checkbox"></td></tr>
-<tr><td>4</td><td>Modifikasi bekas menara tandon air menjadi menara TOA</td><td><input type="checkbox" checked></td></tr>
-<tr><td>5</td><td>Pengadaan microphone imam 4 unit (stok cadangan)</td><td><input type="checkbox"></td></tr>
-<tr><td>6</td><td>Pengadaan 3 pcs baterai & 1 unit charger</td><td><input type="checkbox"></td></tr>
-<tr><td>7</td><td>Pengadaan kabel control wire 4 group</td><td><input type="checkbox"></td></tr>
-<tr><td>8</td><td>Pengadaan kabel TOA 100 meter</td><td><input type="checkbox"></td></tr>
-<tr><td>9</td><td>Pengadaan TR-OT untuk ampli lama</td><td><input type="checkbox"></td></tr>
-<tr><td>10</td><td>Pengadaan sparepart TR-IT</td><td><input type="checkbox"></td></tr>
-<tr><td>11</td><td>Pembuatan box kontrol modifikasi</td><td><input type="checkbox"></td></tr>
-<tr><td>12</td><td>Pemasangan TOA sisi selatan 3 unit</td><td><input type="checkbox" checked></td></tr>
-<tr><td>13</td><td>Pengecatan menara TOA sisi selatan</td><td><input type="checkbox"></td></tr>
-<tr><td>14</td><td>Pembuatan tower TOA sisi utara</td><td><input type="checkbox"></td></tr>
-<tr><td>15</td><td>Mounting & pemasangan TOA sisi depan masjid</td><td><input type="checkbox"></td></tr>
-<tr><td>16</td><td>Pembuatan menara TOA sisi utara</td><td><input type="checkbox"></td></tr>
-<tr><td>17</td><td>Perbaikan amplifier lama (±80%)</td><td><input type="checkbox"></td></tr>
-<tr><td>18</td><td>Perakitan modul kontrol sistem sound</td><td><input type="checkbox"></td></tr>
-<tr><td>19</td><td>Penambahan mounting speaker sisi selatan & utara</td><td><input type="checkbox"></td></tr>
-<tr><td>20</td><td>Perbaikan speaker lama (merk BMB)</td><td><input type="checkbox"></td></tr>
-<tr><td>21</td><td>Penambahan / modifikasi amplifier untuk speaker BMB</td><td><input type="checkbox"></td></tr>
-<tr><td>22</td><td>Modifikasi hardcase / lemari amplifier</td><td><input type="checkbox"></td></tr>
-<tr><td>23</td><td>Pengecatan akhir menara TOA sisi selatan</td><td><input type="checkbox"></td></tr>
-</tbody>
-</table>
-
-<div class="progress-box">
-  <div id="progress-bar"></div>
-</div>
-<p id="progress-text">Progress: 0%</p>
-
-<textarea id="catatan" placeholder="Catatan tambahan..."></textarea>
-
-<div class="footer">
-<p>Tim Teknis DKM Masjid Ar-Raudhah - Seksi Tata Ruang & Pembangunan</p>
-</div>
-</div>
-
-<script src="script.js"></script>
-</body>
+<body><div class="container">
+  <h1>LAPORAN UPDATE & PROGRES</h1>
+  <h2>PERBAIKAN SISTEM SOUND<br>MASJID AR-RAUDHAH</h2>  <table class="info-table">
+    <tr><td>Alamat</td><td>: Perumahan Flamboyan Garden 2</td></tr>
+    <tr><td>Nomor</td><td>: 1/JAN/I/2026</td></tr>
+    <tr><td>Tanggal</td><td>: Cikupa, Jumat, 30 Januari 2026</td></tr>
+  </table>  <p><b>Assalamu’alaikum Warahmatullahi Wabarakatuh</b></p>  <p>
+    Dengan hormat,<br>
+    Kami selaku Tim Teknis yang merupakan bagian dari Dewan Kemakmuran Masjid (DKM)
+    Masjid Ar-Raudhah menyampaikan laporan update serta progres pekerjaan
+    peningkatan dan perbaikan sistem sound sebagai berikut:
+  </p>  <div class="section-title">🔧 A. Rencana Pengadaan & Pekerjaan</div>
+  <ul>
+    <li>Pengadaan unit TOA (speaker corong) baru 2 unit</li>
+    <li>Pengadaan 1 unit amplifier baru</li>
+    <li>Perbaikan TOA lama sebanyak 5 unit</li>
+    <li>Modifikasi bekas menara tandon air menjadi menara TOA</li>
+    <li>Pengadaan microphone imam 4 unit (stok cadangan)</li>
+    <li>Pengadaan 3 pcs baterai dan 1 unit charger</li>
+    <li>Pengadaan kabel control wire 4 group</li>
+    <li>Pengadaan kabel TOA sepanjang 100 meter</li>
+    <li>Pengadaan TR-OT untuk perbaikan & modifikasi ampli lama</li>
+    <li>Pengadaan sparepart TR-IT</li>
+    <li>Pembuatan box kontrol modifikasi</li>
+  </ul>  <div class="section-title">✅ B. Progres Pekerjaan yang Telah Selesai</div>
+  <ul>
+    <li class="done">Modifikasi menara tandon air lama menjadi menara TOA <span class="badge b-done">SELESAI</span></li>
+    <li class="done">Pemasangan TOA sisi selatan sebanyak 3 unit <span class="badge b-done">SELESAI</span></li>
+  </ul>  <div class="section-title">⏳ C. Progres Pekerjaan yang Belum Selesai</div>
+  <ul>
+    <li class="progress">Pengecatan menara TOA sisi selatan <span class="badge b-progress">PROSES</span></li>
+    <li class="todo">Pembuatan menara TOA sisi utara <span class="badge b-todo">BELUM</span></li>
+    <li class="todo">Mounting & pemasangan TOA sisi depan masjid (TOA lama)</li>
+    <li class="progress">Perbaikan amplifier lama (±80%)</li>
+    <li class="progress">Perakitan modul kontrol sistem sound</li>
+    <li class="todo">Perbaikan speaker lama (merk BMB)</li>
+    <li class="todo">Modifikasi / penambahan amplifier speaker BMB</li>
+    <li class="todo">Modifikasi hardcase / lemari amplifier</li>
+    <li class="todo">Pengecatan akhir menara TOA sisi selatan</li>
+  </ul>  <p>
+    Demikian laporan ini kami sampaikan sebagai bentuk pertanggungjawaban teknis
+    kepada DKM Masjid Ar-Raudhah.
+  </p>  <div class="footer">
+    <p><b>Wassalamu’alaikum Warahmatullahi Wabarakatuh</b></p>
+    <p>Cikupa, Jumat, 30 Januari 2026</p>
+    <p><b>Tim Teknis DKM Masjid Ar-Raudhah</b><br>Seksi Tata Ruang & Pembangunan</p>
+  </div>
+</div></body>
 </html>
